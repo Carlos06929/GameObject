@@ -1,0 +1,28 @@
+C:\Users\alfr0\Desktop\Programacion Grafica\Proyecto OpentTK\Proyecto OpenTK\obj\Debug\Proyecto OpenTK.csprojAssemblyReference.cache
+C:\Users\alfr0\Desktop\Programacion Grafica\Proyecto OpentTK\Proyecto OpenTK\obj\Debug\Proyecto OpenTK.csproj.CoreCompileInputs.cache
+C:\Users\alfr0\Desktop\Programacion Grafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\Proyecto OpenTK.exe.config
+C:\Users\alfr0\Desktop\Programacion Grafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\Proyecto OpenTK.exe
+C:\Users\alfr0\Desktop\Programacion Grafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\Proyecto OpenTK.pdb
+C:\Users\alfr0\Desktop\Programacion Grafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\OpenTK.dll
+C:\Users\alfr0\Desktop\Programacion Grafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\OpenTK.GLControl.dll
+C:\Users\alfr0\Desktop\Programacion Grafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\OpenTK.pdb
+C:\Users\alfr0\Desktop\Programacion Grafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\OpenTK.xml
+C:\Users\alfr0\Desktop\Programacion Grafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\OpenTK.GLControl.pdb
+C:\Users\alfr0\Desktop\Programacion Grafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\OpenTK.GLControl.xml
+C:\Users\alfr0\Desktop\Programacion Grafica\Proyecto OpentTK\Proyecto OpenTK\obj\Debug\Proyecto OpenTK.csproj.CopyComplete
+C:\Users\alfr0\Desktop\Programacion Grafica\Proyecto OpentTK\Proyecto OpenTK\obj\Debug\Proyecto OpenTK.exe
+C:\Users\alfr0\Desktop\Programacion Grafica\Proyecto OpentTK\Proyecto OpenTK\obj\Debug\Proyecto OpenTK.pdb
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\Proyecto OpenTK.exe.config
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\Proyecto OpenTK.exe
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\Proyecto OpenTK.pdb
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\OpenTK.dll
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\OpenTK.GLControl.dll
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\OpenTK.pdb
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\OpenTK.xml
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\OpenTK.GLControl.pdb
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\OpenTK.GLControl.xml
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\obj\Debug\Proyecto OpenTK.csproj.AssemblyReference.cache
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\obj\Debug\Proyecto OpenTK.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\obj\Debug\Proyecto OpenTK.csproj.CopyComplete
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\obj\Debug\Proyecto OpenTK.exe
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\obj\Debug\Proyecto OpenTK.pdb
