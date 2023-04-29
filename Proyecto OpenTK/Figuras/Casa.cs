@@ -19,7 +19,7 @@ namespace Proyecto_OpenTK.Figuras
         private double x, y, z, anchoX, altoY, largoZ;
         Color pintura;
         //Hashtable casa = new Hashtable();
-
+        //crear la lista de los escenarios y caras en una estructura hash o diccionari en C#
         public Casa(Color color, double x = -14, double y = -4, double z = 10, double ancho = 1.0, double alto = 1.0, double largo = 1.0)
         {
             this.x = x; this.y = y; this.z = z;
@@ -31,7 +31,7 @@ namespace Proyecto_OpenTK.Figuras
         public void Dibujar()
         {
             Color color = pintura;
-            GL.PushMatrix();//Toda la Silla
+            GL.PushMatrix();//Toda la casa
             GL.Scale(this.anchoX, this.altoY, this.largoZ);//Variar Escala
             GL.Translate(this.x, this.y, this.z);          //Variar Posicion
             GL.Rotate(angle, rx, ry, rz);                  //Variar Rotacion
@@ -41,10 +41,12 @@ namespace Proyecto_OpenTK.Figuras
 
         }
 
+
+
         private void TablaBase(Color color)
         {
             GL.PushMatrix();
-            GL.Scale(5, 5, 15);
+            GL.Scale(5, 5, 8);
             Piramide3D(color);
             GL.PopMatrix();
         }
@@ -52,7 +54,7 @@ namespace Proyecto_OpenTK.Figuras
         private void BaseCasa(Color color)
         {
             GL.PushMatrix();
-            GL.Scale(5,5,15);
+            GL.Scale(5,5,8);
             GL.Translate(0, -1, 0);
             Cubo3D(color);
             GL.PopMatrix();
@@ -124,7 +126,7 @@ namespace Proyecto_OpenTK.Figuras
         private void Piramide3D(Color color)
         {
             GL.Begin(PrimitiveType.Triangles);
-
+            
             GL.Color3(Color.Yellow);
             GL.Normal3(0.0, 0.0, 1.0);
             GL.Vertex3(0f, 1f, 1f);

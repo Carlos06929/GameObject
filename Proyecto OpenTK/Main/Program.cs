@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using OpenTK;
+using Proyecto_OpenTK.Figuras;
 
 namespace Proyecto_OpenTK
 {
@@ -14,6 +15,8 @@ namespace Proyecto_OpenTK
         {
             Game windows = new Game(1024, 680);
             windows.Run(1.0 / 60.0);
+            
+            
         }
     }
 }

@@ -48,7 +48,7 @@ namespace Proyecto_OpenTK.Figuras
 
         private void BaseSuperior(Color color)
         {
-            GL.PushMatrix();//Tabla base
+            GL.PushMatrix();
             GL.Scale(2, 1, 3);
             //Piramide3D(color);
             Cubo3D(color);
@@ -57,7 +57,7 @@ namespace Proyecto_OpenTK.Figuras
 
         private void BaseAuto(Color color)
         {
-            GL.PushMatrix();//Tabla base
+            GL.PushMatrix();
             GL.Scale(2,1.5,5);
             GL.Translate(0, -1.5, 0);
             //Piramide3D(color);
@@ -67,7 +67,7 @@ namespace Proyecto_OpenTK.Figuras
 
         private void Rueda1(Color color)
         {
-            GL.PushMatrix();//Tabla base
+            GL.PushMatrix();
             GL.Scale(0.5,1,0.8);
             GL.Translate(-3.2,-3.2,-4);
             //Piramide3D(color);
@@ -78,7 +78,7 @@ namespace Proyecto_OpenTK.Figuras
 
         private void Rueda2(Color color)
         {
-            GL.PushMatrix();//Tabla base
+            GL.PushMatrix();
             GL.Scale(0.5,1,0.8);
             GL.Translate(3.2,-3.2, -4);
             //Piramide3D(color);
@@ -88,7 +88,7 @@ namespace Proyecto_OpenTK.Figuras
 
         private void Rueda3(Color color)
         {
-            GL.PushMatrix();//Tabla base
+            GL.PushMatrix();
             GL.Scale(0.5,1,0.8);
             GL.Translate(-3.2,-3.2,4);
             //Piramide3D(color);
@@ -98,7 +98,7 @@ namespace Proyecto_OpenTK.Figuras
 
         private void Rueda4(Color color)
         {
-            GL.PushMatrix();//Tabla base
+            GL.PushMatrix();
             GL.Scale(0.5,1,0.8);
             GL.Translate(3.2,-3.2,4);
             //Piramide3D(color);
