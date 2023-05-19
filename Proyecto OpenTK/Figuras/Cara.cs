@@ -9,96 +9,147 @@ using OpenTK;
 using OpenTK.Graphics.OpenGL;
 using System.Text.Json.Serialization;
 using System.Windows;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace Proyecto_OpenTK.Figuras
 {
-    class Cara
+    [JsonObject(MemberSerialization.OptIn)]
+    public class Cara
     {
-        public List<Point> vertices { get; set; }
-        public Point centro { get; set; }
-        public string color { get; set; }
+
+        [JsonProperty] public Punto origen;
+        [JsonProperty] public Punto cm;
+        [JsonProperty] public Punto rotacionCm;
+        [JsonProperty] public Punto rotacionO;
+        [JsonProperty] public Punto rotacionE;
+        [JsonProperty] public Dictionary<string, Punto> lista;
+        [JsonProperty] public Color color;
+        [JsonProperty] public PrimitiveType tipo;
 
         public Cara()
         {
-            this.vertices = new List<Point>();
-            this.centro = new Point(0f, 0f, 0f); ;
-            this.color = "White";
+            this.lista = new Dictionary<string, Punto>();
+            this.origen = new Punto();
+            this.tipo = PrimitiveType.LineLoop;
+            this.color = Color.Pink;
+            this.cm = new Punto();
+            this.rotacionCm = new Punto();
+            this.rotacionO = new Punto();
+            this.rotacionE = new Punto();
         }
+        
 
-        [JsonConstructor]
-        public Cara(List<Point> vertices, Point centro, string color)
+        public Cara(Punto origen, PrimitiveType tipo, Dictionary<string, Punto> puntos, Color c, Punto cm)
         {
-            this.vertices = vertices;
-
-            this.centro = centro;
-            this.color = color;
-
-           
+            this.lista = puntos;
+            this.origen = new Punto(origen);
+            this.tipo = tipo;
+            this.color = c;
+            this.cm = new Punto(cm);
+            this.rotacionCm = new Punto();
+            this.rotacionO = new Punto();
+            this.rotacionE = new Punto();
         }
-
-        public List<Point> getVertices()
+        
+        public Cara(Cara cara)
         {
-            return this.vertices;
+            this.origen = new Punto(cara.origen);
+            this.cm = new Punto(cara.cm);
+            this.tipo = cara.tipo;
+            this.color = cara.color;
+            this.lista = new Dictionary<string, Punto>();
+            this.rotacionCm = new Punto();
+            this.rotacionO = new Punto();
+            this.rotacionE = new Punto();
+            foreach (var puntos in cara.lista)
+                Adicionar(puntos.Key, new Punto(puntos.Value));
         }
-
-        public void setVertices(List<Point> vertices)
+        
+        public static void SerializeJsonFile(string path, Cara obj)
         {
-            this.vertices = vertices;
+            string textJson = JsonConvert.SerializeObject(obj, Formatting.Indented);
+            File.WriteAllText(path, textJson);
         }
-
-        public Point getCentro()
+        public static Cara DeserializeJsonFile(string json)
         {
-            return this.centro;
+            string textJson = new StreamReader(json).ReadToEnd();
+            return JsonConvert.DeserializeObject<Cara>(textJson);
         }
-
-        public void setCentro(Point centro)
+        
+        public void Adicionar(string name, Punto x)
         {
-            this.centro = centro;
-        }
-
-        public string getColor()
-        {
-            return this.color;
-        }
-
-        public void setColor(string color)
-        {
-            this.color = color;
-        }
-
-        public void agregarVertice(Point vertice)
-        {
-            this.vertices.Add(vertice);
-        }
-
-        public void eliminarVertice(int posicion)
-        {
-            this.vertices.RemoveAt(posicion);
-        }
-
-        public void dibujar(Point centroPadre)
-        {
-
-
-            
-
-            Console.WriteLine(this.color);
-            GL.Color3(Color.FromName(color));
-            GL.Begin(PrimitiveType.Polygon);
-
-            foreach (Point vertice in this.vertices)
+            if (lista.ContainsKey(name))
             {
-
-                GL.Vertex3(
-                    vertice.X + this.centro.X+centroPadre.X,
-                    vertice.Y + this.centro.Y+ centroPadre.Y,
-                    vertice.Z + this.centro.Z+ centroPadre.Z
-                    );
+                lista.Remove(name);
             }
-
+            lista.Add(name, x);
+        }
+        
+        public Punto Get(string name)
+        {
+            return (lista.ContainsKey(name)) ? lista[name] : null;
+        }
+        
+        public void Dibujar()
+        {
+            GL.PushMatrix();
+            this.AplicarTransformacion();
+            GL.Begin(tipo); //tipo de figura
+            GL.Color4(color); //color de la cara
+            foreach (var vertice in lista.Values)
+                GL.Vertex3((vertice.x), (vertice.y), (vertice.z));
             GL.End();
-            
+            GL.PopMatrix();
+        }
+        
+        public void Rotar(float x, float y, float z)
+        {
+            rotacionCm.acumular(x, y, z);
         }
 
+        
+        public void Escalar(float x, float y, float z)
+        {
+            if (x <= 0) x = 1;
+            if (y <= 0) y = 1;
+            if (z <= 0) z = 1;
+            this.cm.multiplicar(x, y, z);
+            foreach (var vertice in lista.Values)
+                vertice.multiplicar(x, y, z);
+        }
+        
+        public void Trasladar(float x, float y, float z)
+        {
+            origen.acumular(x, y, z);
+        }
+        
+        public void RotarO(float x, float y, float z)
+        {
+            rotacionO.acumular(x, y, z);
+        }
+        public void RotarE(float x, float y, float z)
+        {
+            rotacionE.acumular(x, y, z);
+        }
+
+
+
+
+
+        private void AplicarTransformacion()
+        {
+            this.rotar(new Punto(), rotacionE);
+            this.rotar(origen, rotacionO);
+            this.rotar(cm, rotacionCm);
+            GL.Translate(-cm.x, -cm.y, -cm.z);
+        }
+        private void rotar(Punto ori, Punto rot)
+        {
+            GL.Translate(ori.x, ori.y, ori.z);
+            GL.Rotate(rot.x, 1, 0, 0);
+            GL.Rotate(rot.y, 0, 1, 0);
+            GL.Rotate(rot.z, 0, 0, 1);
+        }
     }
 }

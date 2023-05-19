@@ -7,50 +7,57 @@ using System.Threading.Tasks;
 
 namespace Proyecto_OpenTK.Figuras
 {
-    class Escenario
+    public class Escenario
     {
 
+        #region Atributos
+        public Dictionary<string, Objeto> lista;
 
-        public Dictionary<string, Objeto> objetos { get; set; }
-
-        public Escenario(Dictionary<string, Objeto> objetos)
-        {
-            this.objetos = objetos;
-        }
-
-        [JsonConstructor]
+        #endregion
         public Escenario()
         {
-            this.objetos = new Dictionary<string, Objeto>();
+            this.lista = new Dictionary<string, Objeto>();
         }
+        
 
-        public Dictionary<string, Objeto> getObjetos()
+        public Objeto GetObjeto(string name)
         {
-            return this.objetos;
+            return (lista.ContainsKey(name)) ? lista[name] : null;
         }
+        
 
-        public void setObjetos(Dictionary<string, Objeto> objetos)
+        public void SetObjeto(string name, Objeto x)
         {
-            this.objetos = objetos;
+            if (lista.ContainsKey(name)) { lista.Remove(name); }
+            lista.Add(name, x);
         }
+        
+        public void Dibujar()
+        {
+            //this.AplicarTransformacion();
+            foreach (var objetos in lista.Values)
+                objetos.Dibujar();
+        }
+        
+        public void Rotar(float x, float y, float z)
+        {
+            foreach (var objetos in lista.Values)
+                objetos.RotarE(x, y, z);
+        }
+        
+        public void Trasladar(float x, float y, float z)
+        {
+            foreach (var objetos in lista.Values)
+                objetos.Trasladar(x, y, z);
+        }
+        
+        public void Escalar(float x, float y, float z)
+        {
+            foreach (var objetos in lista.Values)
+                objetos.Escalar(x, y, z);
+        }
+        
 
-        public void agregarObjeto(string nombre, Objeto objeto)
-        {
-            this.objetos.Add(nombre, objeto);
-        }
-
-        public void eliminarObjeto(string nombre)
-        {
-            this.objetos.Remove(nombre);
-        }
-
-        public void dibujar()
-        {
-            foreach (KeyValuePair<string, Objeto> objeto in objetos)
-            {
-                objeto.Value.dibujar();
-            }
-        }
 
     }
 }

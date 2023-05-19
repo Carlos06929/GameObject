@@ -1,85 +1,118 @@
-﻿using OpenTK;
-using OpenTK.Graphics.OpenGL;
-using System;
+﻿using Newtonsoft.Json;
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace Proyecto_OpenTK.Figuras
 {
-    class Objeto
+    [JsonObject(MemberSerialization.OptIn)]
+    public class Objeto
     {
+        [JsonProperty] public Punto origen;
+        [JsonProperty] public float ancho;
+        [JsonProperty] public float alto;
+        [JsonProperty] public float profundidad;
+        [JsonProperty] public Dictionary<string, Cara> lista;
 
-        public List<Cara> caras { get; set; }
-        public Point centro { get; set; }
-        public string nombre { get; set; }
 
-        [JsonConstructor]
+        
         public Objeto()
         {
-            this.caras = new List<Cara>();
-            this.centro = new Point(0f, 0f, 0f);
-            this.nombre = "";
+            this.lista = new Dictionary<string, Cara>();
+            this.origen = new Punto();
+            this.ancho = this.alto = this.profundidad = 0;
         }
-
-        public Objeto(List<Cara> caras, Point centro, string nombre)
+        
+        public Objeto(Punto origen, float ancho, float alto, float profundidad, Dictionary<string, Cara> caras)
         {
-            this.caras = caras;
-            this.centro = centro;
-            
-            this.nombre = nombre;
-        }
-
-        public List<Cara> getCaras()
-        {
-            return this.caras;
-        }
-
-        public void setCaras(List<Cara> caras)
-        {
-            this.caras = caras;
-        }
-
-        public Point getCentro()
-        {
-            return this.centro;
-        }
-
-        public void setCentro(Point centro)
-        {
-            this.centro = centro;
-        }
-
-        public string getNombre()
-        {
-            return this.nombre;
-        }
-
-        public void setNombre(string nombre)
-        {
-            this.nombre = nombre;
-        }
-
-        public void agregarCara(Cara cara)
-        {
-            this.caras.Add(cara);
-        }
-
-        public void eliminarCara(int posicion)
-        {
-            this.caras.RemoveAt(posicion);
-        }
-
-        public void dibujar()
-        {
-
-            foreach (Cara cara in this.caras)
+            this.origen = origen;
+            this.ancho = ancho;
+            this.alto = alto;
+            this.profundidad = profundidad;
+            this.lista = caras;
+            foreach (var _caras in lista.Values)
             {
-                
-                cara.dibujar(this.centro);
+                _caras.origen.x = this.origen.x;
+                _caras.origen.y = this.origen.y;
+                _caras.origen.z = this.origen.x;
             }
+            
+        }
+        public Objeto(Objeto objeto)
+        {
+            this.origen = new Punto(objeto.origen);
+            this.ancho = objeto.ancho;
+            this.alto = objeto.alto;
+            this.profundidad = objeto.profundidad;
+            this.lista = new Dictionary<string, Cara>();
+            foreach (var caras in objeto.lista)
+                this.SetCara(caras.Key, new Cara(caras.Value));
+        }
+        //--------------------------------------------------------------------------------------------------------------------
+
+        public static void SerializeJsonFile(string path, Objeto obj)
+        {
+            string textJson = JsonConvert.SerializeObject(obj, Formatting.Indented);
+            File.WriteAllText(path, textJson);
+        }
+        public static Objeto DeserializeJsonFile(string json)
+        {
+            string textJson = new StreamReader(json).ReadToEnd();
+            return JsonConvert.DeserializeObject<Objeto>(textJson);
+        }
+        
+        public void SetCara(string name, Cara x)
+        {
+            if (lista.ContainsKey(name))
+            {
+                lista.Remove(name);
+            }
+            lista.Add(name, x);
+        }
+
+        public void SetOrigen(float x, float y, float z)
+        {
+            foreach (var caras in lista.Values)
+            {
+                caras.origen.x = x;
+                caras.origen.y = y;
+                caras.origen.z = z;
+            }
+        }
+        public Cara GetCara(string name)
+        {
+            return (lista.ContainsKey(name)) ? lista[name] : null;
+        }
+        
+        public void Dibujar()
+        {
+            foreach (var caras in lista.Values)
+                caras.Dibujar();
+        }
+
+        
+        public void Rotar(float x, float y, float z)
+        {
+            foreach (var caras in lista.Values)
+                caras.RotarO(x, y, z);
+        }
+        
+        public void Escalar(float x, float y, float z)
+        {
+            foreach (var caras in lista.Values)
+                caras.Escalar(x, y, z);
+        }
+        
+        public void Trasladar(float x, float y, float z)
+        {
+            foreach (var caras in lista.Values)
+                caras.Trasladar(x, y, z);
+        }
+        
+        public void RotarE(float x, float y, float z)
+        {
+            foreach (var caras in lista.Values)
+                caras.RotarE(x, y, z);
         }
 
     }

@@ -26,6 +26,10 @@ namespace Proyecto_OpenTK
             {
                 scale++;
             }
+            if (e.IsKeyDown(Key.A) && scale < 300)
+            {
+                ;
+            }
         }
 
     }

@@ -44,3 +44,5 @@ C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\S
 C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\System.Text.Json.xml
 C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\System.ValueTuple.xml
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\Newtonsoft.Json.dll
+C:\Users\DELL\Documents\ProgGrafica\Proyecto OpentTK\Proyecto OpenTK\bin\Debug\Newtonsoft.Json.xml
