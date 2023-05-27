@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 using OpenTK;
 using Proyecto_OpenTK.Figuras;
+using Proyecto_OpenTK.Main;
 
 namespace Proyecto_OpenTK
 {
@@ -15,6 +16,9 @@ namespace Proyecto_OpenTK
         {
             Game windows = new Game(1024, 680);
             windows.Run(1.0 / 60.0);
+            //Application.EnableVisualStyles();
+            //Application.Run(new Form1());
+
         }
     }
 }

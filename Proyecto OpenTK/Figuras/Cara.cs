@@ -97,6 +97,7 @@ namespace Proyecto_OpenTK.Figuras
             this.AplicarTransformacion();
             GL.Begin(tipo); //tipo de figura
             GL.Color4(color); //color de la cara
+
             foreach (var vertice in lista.Values)
                 GL.Vertex3((vertice.x), (vertice.y), (vertice.z));
             GL.End();

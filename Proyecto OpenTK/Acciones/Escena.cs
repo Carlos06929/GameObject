@@ -44,11 +44,11 @@ namespace Proyecto_OpenTK.Acciones
         public static void SerializeJsonFile(string path, Escena obj)
         {
             string textJson = JsonConvert.SerializeObject(obj, Formatting.Indented);
-            File.WriteAllText(path, textJson);
+            File.WriteAllText("../../archivos/" + path, textJson);
         }
         public static Escena DeserializeJsonFile(string json)
         {
-            string textJson = new StreamReader(json).ReadToEnd();
+            string textJson = new StreamReader("../../archivos/" + json).ReadToEnd();
             return JsonConvert.DeserializeObject<Escena>(textJson);
         }
 

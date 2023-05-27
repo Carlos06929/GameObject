@@ -1,11 +1,13 @@
 ﻿using Newtonsoft.Json;
-
+using OpenTK;
 using System.Collections.Generic;
 using System.IO;
 
 namespace Proyecto_OpenTK.Figuras
 {
     [JsonObject(MemberSerialization.OptIn)]
+
+
     public class Objeto
     {
         [JsonProperty] public Punto origen;
@@ -14,8 +16,15 @@ namespace Proyecto_OpenTK.Figuras
         [JsonProperty] public float profundidad;
         [JsonProperty] public Dictionary<string, Cara> lista;
 
+        public Vector3 Position = Vector3.Zero;
+        public Vector3 Rotation = Vector3.Zero;
+        public Vector3 Scale = Vector3.One;
 
-        
+        public Matrix4 ModelMatrix = Matrix4.Identity;
+        public Matrix4 ViewProjectionMatrix = Matrix4.Identity;
+        public Matrix4 ModelViewProjectionMatrix = Matrix4.Identity;
+
+
         public Objeto()
         {
             this.lista = new Dictionary<string, Cara>();
@@ -53,11 +62,11 @@ namespace Proyecto_OpenTK.Figuras
         public static void SerializeJsonFile(string path, Objeto obj)
         {
             string textJson = JsonConvert.SerializeObject(obj, Formatting.Indented);
-            File.WriteAllText(path, textJson);
+            File.WriteAllText("../../archivos/"+path, textJson);
         }
         public static Objeto DeserializeJsonFile(string json)
         {
-            string textJson = new StreamReader(json).ReadToEnd();
+            string textJson = new StreamReader("../../archivos/"+json).ReadToEnd();
             return JsonConvert.DeserializeObject<Objeto>(textJson);
         }
         

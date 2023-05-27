@@ -1,0 +1,185 @@
+{
+  "tiempoDeDuracion": 50000,
+  "acciones": [
+    {
+      "nombreObjeto": [
+        "rueda1"
+      ],
+      "tipoObjeto": 1,
+      "tiempoI": 5000,
+      "tiempoF": 15000,
+      "tiempoSiguiente": 5000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        3.0,
+        0.0,
+        0.0
+      ],
+      "cuantas": 5000
+    },
+    {
+      "nombreObjeto": [
+        "rueda2"
+      ],
+      "tipoObjeto": 1,
+      "tiempoI": 5000,
+      "tiempoF": 15000,
+      "tiempoSiguiente": 5000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        3.0,
+        0.0,
+        0.0
+      ],
+      "cuantas": 5000
+    },
+    {
+      "nombreObjeto": [
+        "rueda3"
+      ],
+      "tipoObjeto": 1,
+      "tiempoI": 5000,
+      "tiempoF": 15000,
+      "tiempoSiguiente": 5000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        3.0,
+        0.0,
+        0.0
+      ],
+      "cuantas": 5000
+    },
+    {
+      "nombreObjeto": [
+        "rueda4"
+      ],
+      "tipoObjeto": 1,
+      "tiempoI": 5000,
+      "tiempoF": 15000,
+      "tiempoSiguiente": 5000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        3.0,
+        0.0,
+        0.0
+      ],
+      "cuantas": 5000
+    },
+    {
+      "nombreObjeto": [
+        ""
+      ],
+      "tipoObjeto": 0,
+      "tiempoI": 5000,
+      "tiempoF": 7000,
+      "tiempoSiguiente": 5000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        0.0,
+        1.1,
+        0.0
+      ],
+      "cuantas": 50
+    },
+    {
+      "nombreObjeto": [
+        ""
+      ],
+      "tipoObjeto": 0,
+      "tiempoI": 7000,
+      "tiempoF": 9000,
+      "tiempoSiguiente": 7000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        0.0,
+        1.1,
+        0.0
+      ],
+      "cuantas": 75
+    },
+    {
+      "nombreObjeto": [
+        ""
+      ],
+      "tipoObjeto": 0,
+      "tiempoI": 9000,
+      "tiempoF": 11000,
+      "tiempoSiguiente": 9000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        0.0,
+        1.1,
+        0.0
+      ],
+      "cuantas": 100
+    },
+    {
+      "nombreObjeto": [
+        ""
+      ],
+      "tipoObjeto": 0,
+      "tiempoI": 11000,
+      "tiempoF": 13000,
+      "tiempoSiguiente": 11000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        0.0,
+        1.1,
+        0.0
+      ],
+      "cuantas": 75
+    },
+    {
+      "nombreObjeto": [
+        ""
+      ],
+      "tipoObjeto": 0,
+      "tiempoI": 13000,
+      "tiempoF": 15000,
+      "tiempoSiguiente": 13000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        0.0,
+        1.01,
+        0.0
+      ],
+      "cuantas": 50
+    }
+  ]
+}

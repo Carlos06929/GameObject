@@ -1,0 +1,325 @@
+{
+  "tiempoDeDuracion": 37000,
+  "acciones": [
+    {
+      "nombreObjeto": [
+        ""
+      ],
+      "tipoObjeto": 0,
+      "tiempoI": 0,
+      "tiempoF": 3000,
+      "tiempoSiguiente": 0,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        0.0,
+        -1.1,
+        0.0
+      ],
+      "cuantas": 75
+    },
+    {
+      "nombreObjeto": [
+        ""
+      ],
+      "tipoObjeto": 0,
+      "tiempoI": 5000,
+      "tiempoF": 7000,
+      "tiempoSiguiente": 5000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "cuantas": 50
+    },
+    {
+      "nombreObjeto": [
+        ""
+      ],
+      "tipoObjeto": 0,
+      "tiempoI": 7000,
+      "tiempoF": 9000,
+      "tiempoSiguiente": 7000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "cuantas": 75
+    },
+    {
+      "nombreObjeto": [
+        ""
+      ],
+      "tipoObjeto": 0,
+      "tiempoI": 9000,
+      "tiempoF": 11000,
+      "tiempoSiguiente": 9000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        0.0,
+        1.1,
+        0.0
+      ],
+      "cuantas": 110
+    },
+    {
+      "nombreObjeto": [
+        ""
+      ],
+      "tipoObjeto": 0,
+      "tiempoI": 11000,
+      "tiempoF": 13000,
+      "tiempoSiguiente": 11000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        0.0,
+        1.1,
+        0.0
+      ],
+      "cuantas": 80
+    },
+    {
+      "nombreObjeto": [
+        ""
+      ],
+      "tipoObjeto": 0,
+      "tiempoI": 13000,
+      "tiempoF": 15000,
+      "tiempoSiguiente": 13000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "cuantas": 65
+    },
+    {
+      "nombreObjeto": [
+        ""
+      ],
+      "tipoObjeto": 0,
+      "tiempoI": 17000,
+      "tiempoF": 20000,
+      "tiempoSiguiente": 17000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "cuantas": 75
+    },
+    {
+      "nombreObjeto": [
+        "highbaseBird"
+      ],
+      "tipoObjeto": 1,
+      "tiempoI": 3000,
+      "tiempoF": 5000,
+      "tiempoSiguiente": 3000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        0.1,
+        0.0,
+        0.0
+      ],
+      "cuantas": 300
+    },
+    {
+      "nombreObjeto": [
+        "picoBird"
+      ],
+      "tipoObjeto": 1,
+      "tiempoI": 3000,
+      "tiempoF": 5000,
+      "tiempoSiguiente": 3000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        0.1,
+        0.0,
+        0.0
+      ],
+      "cuantas": 300
+    },
+    {
+      "nombreObjeto": [
+        "picoBird"
+      ],
+      "tipoObjeto": 1,
+      "tiempoI": 3000,
+      "tiempoF": 5000,
+      "tiempoSiguiente": 3000,
+      "accion": [
+        0,
+        0,
+        1
+      ],
+      "parametros": [
+        0.01,
+        -0.05,
+        -0.011
+      ],
+      "cuantas": 20
+    },
+    {
+      "nombreObjeto": [
+        "highbaseBird"
+      ],
+      "tipoObjeto": 1,
+      "tiempoI": 15000,
+      "tiempoF": 17000,
+      "tiempoSiguiente": 15000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        -0.1,
+        0.0,
+        0.0
+      ],
+      "cuantas": 300
+    },
+    {
+      "nombreObjeto": [
+        "picoBird"
+      ],
+      "tipoObjeto": 1,
+      "tiempoI": 15000,
+      "tiempoF": 17000,
+      "tiempoSiguiente": 15000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        -0.1,
+        0.0,
+        0.0
+      ],
+      "cuantas": 300
+    },
+    {
+      "nombreObjeto": [
+        "picoBird"
+      ],
+      "tipoObjeto": 1,
+      "tiempoI": 15000,
+      "tiempoF": 17000,
+      "tiempoSiguiente": 15000,
+      "accion": [
+        0,
+        0,
+        1
+      ],
+      "parametros": [
+        -0.01,
+        0.05,
+        0.011
+      ],
+      "cuantas": 20
+    },
+    {
+      "nombreObjeto": [
+        "highbaseBird"
+      ],
+      "tipoObjeto": 1,
+      "tiempoI": 20000,
+      "tiempoF": 23000,
+      "tiempoSiguiente": 20000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        -0.1,
+        0.0,
+        0.0
+      ],
+      "cuantas": 300
+    },
+    {
+      "nombreObjeto": [
+        "picoBird"
+      ],
+      "tipoObjeto": 1,
+      "tiempoI": 20000,
+      "tiempoF": 23000,
+      "tiempoSiguiente": 20000,
+      "accion": [
+        0,
+        1,
+        0
+      ],
+      "parametros": [
+        -0.1,
+        0.0,
+        0.0
+      ],
+      "cuantas": 300
+    },
+    {
+      "nombreObjeto": [
+        "picoBird"
+      ],
+      "tipoObjeto": 1,
+      "tiempoI": 20000,
+      "tiempoF": 23000,
+      "tiempoSiguiente": 20000,
+      "accion": [
+        0,
+        0,
+        1
+      ],
+      "parametros": [
+        0.0,
+        0.05,
+        -0.011
+      ],
+      "cuantas": 20
+    }
+  ]
+}
